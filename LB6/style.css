@@ -1,0 +1,185 @@
+html {
+	font-family: sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	background: rgb(52, 206, 142);
+	height: 100px;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+	line-height: 100px;
+	margin: 0;
+}
+
+button {
+	width: 150px;
+	height: 75px;
+	margin: 50px;
+	font-size: 20px;
+	background-color: red;
+	animation: vibration 0.3s infinite;
+}
+
+a {
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+}
+
+a::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 0;
+	height: 2px;
+	background-color: green;
+	transition: width 0.3s ease, left 0.3s ease;
+}
+
+a:hover {
+	color: green;
+}
+
+a:hover::after {
+	width: 100%;
+	left: 0;
+}
+
+@keyframes vibration {
+	0% {
+		transform: translate(0, 0);
+	}
+	16% {
+		transform: translate(-40px, -40px);
+	}
+	33% {
+		transform: translate(-40px, 40px);
+	}
+	50% {
+		transform: translate(40px, 40px);
+	}
+	66% {
+		transform: translate(40px, -40px);
+	}
+	83% {
+		transform: translate(-40px, -40px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+button:hover {
+	animation: none;
+	background-color: green;
+}
+
+@keyframes vibration {
+	0% {
+		transform: translate(0, 0);
+	}
+	16% {
+		transform: translate(-40px, -40px);
+	}
+	33% {
+		transform: translate(-40px, 40px);
+	}
+	50% {
+		transform: translate(40px, 40px);
+	}
+	66% {
+		transform: translate(40px, -40px);
+	}
+	83% {
+		transform: translate(-40px, -40px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes firstJump {
+	0% {
+		transform: translateY(0px) scaleY(1);
+	}
+
+	57% {
+		transform: translateY(500px) scaleY(1);
+	}
+	60% {
+		transform: translateY(500px) scaleY(0.5);
+	}
+	63% {
+		transform: translateY(500px) scaleY(1);
+	}
+
+	100% {
+		transform: translateY(150px) scaleY(1);
+	}
+}
+
+@keyframes secondJump {
+	0% {
+		transform: translateY(150px) scaleY(1);
+	}
+
+	58% {
+		transform: translateY(500px) scaleY(1);
+	}
+	60% {
+		transform: translateY(500px) scaleY(0.7);
+	}
+	62% {
+		transform: translateY(500px) scaleY(1);
+	}
+	100% {
+		transform: translateY(300px) scaleY(1);
+	}
+}
+
+@keyframes thirdJump {
+	0% {
+		transform: translateY(300px) scaleY(1);
+	}
+	60% {
+		transform: translateY(500px) scaleY(1);
+	}
+	80% {
+		transform: translateY(500px) scaleY(0.9);
+	}
+	100% {
+		transform: translateY(500px) scaleY(1);
+	}
+}
+
+.circle {
+	margin-top: 50px;
+	margin-left: 100px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: blueviolet;
+	display: inline-block;
+}
+
+.circle {
+	animation: firstJump 2s ease-in-out 2s, secondJump 1.5s ease-in-out 4s,
+		thirdJump 1s ease-in-out 5.5s;
+	animation-fill-mode: forwards;
+}
+hr {
+	margin-top: 420px;
+	border: 0;
+	height: 5px;
+	background-color: #000000;
+}
