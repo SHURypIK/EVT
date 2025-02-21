@@ -125,15 +125,67 @@
 				<input type="radio" id="option3" name="options" />
 				<label for="option3"> "A A ." ". B B" "C C ."</label>
 			</div>
-			<div class="container" id="сontainer">
+			<div class="container" id="сontainer1">
 				<div class="element">1</div>
 				<div class="element">2</div>
 				<div class="element">3</div>
 			</div>
+
+			<p>grid-auto-flow</p>
+			<div class="radio-container">
+				<input type="radio" id="option21" name="options2" value="row" checked />
+				<label for="option21">row</label>
+
+				<input type="radio" id="option22" name="options2" value="column" />
+				<label for="option22">column</label>
+			</div>
+			<div class="container" id="сontainer2">
+				<div class="element">1</div>
+				<div class="element">2</div>
+				<div class="element">3</div>
+				<div class="element">4</div>
+				<div class="element">5</div>
+				<div class="element">6</div>
+				<div class="element">7</div>
+				<div class="element">8</div>
+				<div class="element">9</div>
+			</div>
+
+			<p>justify-self</p>
+			<div class="radio-container">
+				<input
+					type="radio"
+					id="option31"
+					name="options3"
+					value="start"
+					checked
+				/>
+				<label for="option31">start</label>
+
+				<input type="radio" id="option32" name="options3" value="end" />
+				<label for="option32">end</label>
+
+				<input type="radio" id="option33" name="options3" value="center" />
+				<label for="option33">center</label>
+
+				<input type="radio" id="option34" name="options3" value="stretch" />
+				<label for="option34">stretch</label>
+			</div>
+			<div class="container" id="сontainer3">
+				<div class="element">1</div>
+				<div class="element">2</div>
+				<div class="element">3</div>
+				<div class="element">4</div>
+				<div class="element">5</div>
+				<div class="element">6</div>
+				<div class="element">7</div>
+				<div class="element">8</div>
+				<div class="element">9</div>
+			</div>
 		</footer>
 		<script>
 			const radioButtons = document.querySelectorAll('input[name="options"]');
-			const gridContainer = document.getElementById('сontainer');
+			const gridContainer = document.getElementById('сontainer1');
 
 			radioButtons.forEach(radio => {
 				radio.addEventListener('change', () => {
@@ -144,6 +196,26 @@
 					} else if (radio.id === 'option3') {
 						gridContainer.style.gridTemplateAreas = '"A A ." ". B B" "C C ."';
 					}
+				});
+			});
+
+			const radioButtons2 = document.querySelectorAll('input[name="options2"]');
+			const gridContainer2 = document.getElementById('сontainer2');
+
+			radioButtons2.forEach(radio => {
+				radio.addEventListener('change', () => {
+					gridContainer2.style.gridAutoFlow = radio.value;
+				});
+			});
+
+			const radioButtons3 = document.querySelectorAll('input[name="options3"]');
+			const gridContainer3 = document.getElementById('сontainer3');
+			const element5 = gridContainer3.children[4];
+			console.log(element5);
+
+			radioButtons3.forEach(radio => {
+				radio.addEventListener('change', () => {
+					element5.style.justifySelf = radio.value;
 				});
 			});
 		</script>

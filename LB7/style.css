@@ -90,7 +90,6 @@ footer p {
 	background-color: white;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
 	gap: 1px;
 	width: 25%;
 }
@@ -99,4 +98,11 @@ footer p {
 	border-radius: 5px;
 	background-color: #007bff;
 	color: white;
+	display: flex;
+	align-items: center;
+}
+
+#сontainer3 {
+	height: 400px;
+	align-items: flex-start;
 }

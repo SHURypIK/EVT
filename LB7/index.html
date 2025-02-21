@@ -114,22 +114,22 @@
 		<footer class="flex-varity">
 			<p>justify-content</p>
 			<div class="radio-container">
-        <input type="radio" id="option1" name="options" value="flex-start" checked>
+        <input type="radio" id="option1" name="options1" value="flex-start" checked>
         <label for="option1">flex-start</label>
 
-        <input type="radio" id="option2" name="options" value="flex-end">
+        <input type="radio" id="option2" name="options1" value="flex-end">
         <label for="option2">flex-end</label>
 
-        <input type="radio" id="option3" name="options" value="center">
+        <input type="radio" id="option3" name="options1" value="center">
         <label for="option3">center</label>
 
-        <input type="radio" id="option4" name="options" value="space-between">
+        <input type="radio" id="option4" name="options1" value="space-between">
         <label for="option4">space-between</label>
 
-        <input type="radio" id="option5" name="options" value="space-around">
+        <input type="radio" id="option5" name="options1" value="space-around">
         <label for="option5">space-around</label>
 
-				<input type="radio" id="option6" name="options" value="space-evenly">
+				<input type="radio" id="option6" name="options1" value="space-evenly">
         <label for="option6">space-evenly</label>
     </div>
   	<div class="container" id="сontainer">
@@ -138,14 +138,77 @@
         <div class="element">3</div>
         <div class="element">4</div>
     </div>
+
+		<p>flex-direction</p>
+			<div class="radio-container">
+        <input type="radio" id="option21" name="options2" value="row" checked>
+        <label for="option21">row</label>
+
+        <input type="radio" id="option22" name="options2" value="row-reverse">
+        <label for="option22">row-reverse</label>
+
+        <input type="radio" id="option23" name="options2" value="column">
+        <label for="option23">column</label>
+
+        <input type="radio" id="option24" name="options2" value="column-reverse">
+        <label for="option24">column-reverse</label>
+    </div>
+  	<div class="container" id="сontainer2">
+        <div class="element">1</div>
+        <div class="element">2</div>
+        <div class="element">3</div>
+        <div class="element">4</div>
+    </div>
+
+		<p>align-items</p>
+			<div class="radio-container">
+        <input type="radio" id="option31" name="options3" value="flex-start" checked>
+        <label for="option31">flex-start</label>
+
+        <input type="radio" id="option32" name="options3" value="flex-end">
+        <label for="option32">flex-end</label>
+
+        <input type="radio" id="option33" name="options3" value="center">
+        <label for="option33">center</label>
+
+        <input type="radio" id="option34" name="options3" value="baseline">
+        <label for="option34">baseline</label>
+
+				<input type="radio" id="option35" name="options3" value="stretch">
+        <label for="option35">stretch</label>
+    </div>
+  	<div class="container" id="сontainer3">
+        <div class="element">1</div>
+        <div class="element">2</div>
+        <div class="element">3</div>
+        <div class="element">4</div>
+    </div>
 		</footer>
 	<script>
-		const radioButtons = document.querySelectorAll('input[name="options"]');
+		const radioButtons = document.querySelectorAll('input[name="options1"]');
     const flexContainer = document.getElementById('сontainer');
 
     radioButtons.forEach(radio => {
         radio.addEventListener('change', () => {
             flexContainer.style.justifyContent = radio.value;
+        });
+    });
+
+		const radioButtons2 = document.querySelectorAll('input[name="options2"]');
+    const flexContainer2 = document.getElementById('сontainer2');
+
+    radioButtons2.forEach(radio => {
+        radio.addEventListener('change', () => {
+            flexContainer2.style.flexDirection = radio.value;
+        });
+    });
+
+		const radioButtons3 = document.querySelectorAll('input[name="options3"]');
+    const flexContainer3 = document.getElementById('сontainer3');
+
+    radioButtons3.forEach(radio => {
+        radio.addEventListener('change', () => {
+            flexContainer3.style.alignItems = radio.value;
         });
     });
 	</script>

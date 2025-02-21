@@ -105,7 +105,6 @@ footer p {
 	gap: 1px;
 	grid-template-columns: repeat(3, 50px);
 	grid-template-rows: repeat(3, 50px);
-	grid-template-areas: 'A A A' 'B C C' 'B C C';
 }
 .element {
 	display: grid;
@@ -115,12 +114,21 @@ footer p {
 	color: white;
 	text-align: center;
 }
-.element:nth-child(1) {
+#сontainer1 .element:nth-child(1) {
 	grid-area: A;
 }
-.element:nth-child(2) {
+#сontainer1 .element:nth-child(2) {
 	grid-area: B;
 }
-.element:nth-child(3) {
+#сontainer1 .element:nth-child(3) {
 	grid-area: C;
+}
+
+#сontainer1 {
+	grid-template-areas: 'A A A' 'B C C' 'B C C';
+}
+
+#сontainer3 .element:nth-child(5) {
+	padding: 10px;
+	justify-self: start;
 }
