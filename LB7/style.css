@@ -1,0 +1,102 @@
+html {
+	font-family: sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	background: rgb(52, 206, 142);
+	height: 100px;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+	line-height: 100px;
+	margin: 0;
+}
+
+article {
+	padding: 10px;
+	margin: 10px;
+	background: rgba(16, 233, 215, 0.178);
+}
+
+.first-line {
+	display: flex;
+}
+
+.main-block {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.right-column {
+	display: flex;
+	flex-direction: column-reverse;
+	flex: 1;
+}
+
+.second-row {
+	display: flex;
+	flex: 2;
+	flex-wrap: wrap;
+}
+
+.second-row article {
+	width: calc(50% - 40px);
+}
+
+.radio-container {
+	display: flex;
+	gap: 10px; /*отступ между элементом*/
+}
+label {
+	padding: 10px 15px;
+	border: 1px solid #007bff;
+	border-radius: 5px;
+	background-color: white;
+	color: #007bff;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+input[type='radio'] {
+	display: none; /* Скрываем стандартную реализацию*/
+}
+input[type='radio']:checked + label {
+	background-color: #007bff; /* Цвет фона для выбранной радиокнопки */
+	color: white; /* Цвет текста для выбранной радиокнопки */
+}
+
+footer {
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+footer p {
+	font-weight: bold;
+	font-size: 24pt;
+}
+
+.container {
+	margin: 20px;
+	border: 2px solid #007bff;
+	border-radius: 10px;
+	padding: 20px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1px;
+	width: 25%;
+}
+.element {
+	padding: 10px 15px;
+	border-radius: 5px;
+	background-color: #007bff;
+	color: white;
+}

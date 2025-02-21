@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>grid</title>
+	</head>
+	<body>
+		<header>
+			<h1>Изучаем grid</h1>
+		</header>
+		<div class="grid">
+			<article>
+				<h2>1</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio maxime
+					incidunt perferendis molestiae impedit molestias, harum obcaecati
+					sequi, quae similique sapiente ea quibusdam cum rerum, sit error iure
+					nihil adipisci. Lorem ipsum dolor, sit amet consectetur adipisicing
+					elit. Optio maxime incidunt perferendis molestiae impedit molestias,
+					harum obcaecati sequi, quae similique sapiente ea quibusdam cum rerum,
+					sit error iure nihil adipisci.
+				</p>
+			</article>
+			<article>
+				<h2>2</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio maxime
+					incidunt perferendis molestiae impedit molestias, harum obcaecati
+					sequi, quae similique sapiente ea quibusdam cum rerum, sit error iure
+					nihil adipisci.
+				</p>
+			</article>
+			<article>
+				<h2>3</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio maxime
+					incidunt perferendis molestiae impedit molestias, harum obcaecati
+					sequi, quae similique sapiente ea quibusdam cum rerum, sit error iure
+					nihil adipisci. Lorem ipsum dolor, sit amet consectetur adipisicing
+					elit. Optio maxime incidunt perferendis molestiae impedit molestias,
+					harum obcaecati sequi, quae similique sapiente ea quibusdam cum rerum,
+					sit error iure nihil adipisci.
+				</p>
+			</article>
+			<article>
+				<h2>4</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio maxime
+					incidunt perferendis molestiae impedit molestias, harum obcaecati
+					sequi, quae similique sapiente ea quibusdam cum rerum, sit error iure
+					nihil adipisci.
+				</p>
+			</article>
+			<article>
+				<h2>5</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio maxime
+					incidunt perferendis molestiae impedit molestias, harum obcaecati
+					sequi, quae similique sapiente ea quibusdam cum rerum, sit error iure
+					nihil adipisci.
+				</p>
+			</article>
+			<article>
+				<h2>6</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio maxime
+					incidunt perferendis molestiae impedit molestias, harum obcaecati
+					sequi, quae similique sapiente ea quibusdam cum rerum, sit error iure
+					nihil adipisci.
+				</p>
+			</article>
+			<article>
+				<h2>7</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio maxime
+					incidunt perferendis molestiae impedit molestias, harum obcaecati
+					sequi, quae similique sapiente ea quibusdam cum rerum, sit error iure
+					nihil adipisci.
+				</p>
+			</article>
+			<article>
+				<h2>8</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio maxime
+					incidunt perferendis molestiae impedit molestias, harum obcaecati
+					sequi, quae similique sapiente ea quibusdam cum rerum, sit error iure
+					nihil adipisci.
+				</p>
+			</article>
+			<article>
+				<h2>9</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio maxime
+					incidunt perferendis molestiae impedit molestias, harum obcaecati
+					sequi, quae similique sapiente ea quibusdam cum rerum, sit error iure
+					nihil adipisci. Lorem ipsum dolor, sit amet consectetur adipisicing
+					elit. Optio maxime incidunt perferendis molestiae impedit molestias,
+					harum obcaecati sequi, quae similique sapiente ea quibusdam cum rerum,
+					sit error iure nihil adipisci.
+				</p>
+			</article>
+			<article>
+				<h2>10</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio maxime
+					incidunt perferendis molestiae impedit molestias, harum obcaecati
+					sequi, quae similique sapiente ea quibusdam cum rerum, sit error iure
+					nihil adipisci.
+				</p>
+			</article>
+		</div>
+
+		<footer class="grid-varity">
+			<p>grid-template-areas</p>
+			<div class="radio-container">
+				<input type="radio" id="option1" name="options" checked />
+				<label for="option1">"A A A" "B C C" "B C C"</label>
+
+				<input type="radio" id="option2" name="options" />
+				<label for="option2">"B B A" "B B C" "B B C"</label>
+
+				<input type="radio" id="option3" name="options" />
+				<label for="option3"> "A A ." ". B B" "C C ."</label>
+			</div>
+			<div class="container" id="сontainer">
+				<div class="element">1</div>
+				<div class="element">2</div>
+				<div class="element">3</div>
+			</div>
+		</footer>
+		<script>
+			const radioButtons = document.querySelectorAll('input[name="options"]');
+			const gridContainer = document.getElementById('сontainer');
+
+			radioButtons.forEach(radio => {
+				radio.addEventListener('change', () => {
+					if (radio.id === 'option1') {
+						gridContainer.style.gridTemplateAreas = '"A A A" "B C C" "B C C"';
+					} else if (radio.id === 'option2') {
+						gridContainer.style.gridTemplateAreas = '"B B A" "B B C" "B B C"';
+					} else if (radio.id === 'option3') {
+						gridContainer.style.gridTemplateAreas = '"A A ." ". B B" "C C ."';
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

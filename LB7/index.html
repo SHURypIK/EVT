@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Flex</title>
+	</head>
+		<header>
+			<h1>Изучаем flexbox</h1>
+		</header>
+		<div class="first-line">
+			<article>
+				<h2>1</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
+					perspiciatis quo praesentium harum quibusdam nostrum aliquam
+					voluptates ullam aliquid, dolor consectetur expedita, nisi mollitia
+					reiciendis deleniti sit natus quos est.
+				</p>
+			</article>
+			<article>
+				<h2>2</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
+					perspiciatis quo praesentium harum quibusdam nostrum aliquam
+					voluptates ullam aliquid, dolor consectetur expedita, nisi mollitia
+					reiciendis deleniti sit natus quos est.
+				</p>
+			</article>
+			<article>
+				<h2>3</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
+					perspiciatis quo praesentium harum quibusdam nostrum aliquam
+					voluptates ullam aliquid, dolor consectetur expedita, nisi mollitia
+					reiciendis deleniti sit natus quos est.
+				</p>
+			</article>
+		</div>
+
+    <div class="main-block">
+		<div class="right-column">
+			<article>
+				<h2>4</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
+					perspiciatis quo praesentium harum quibusdam nostrum aliquam
+					voluptates ullam aliquid, dolor consectetur expedita, nisi mollitia
+					reiciendis deleniti sit natus quos est.
+				</p>
+			</article>
+			<article>
+				<h2>5</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
+					perspiciatis quo praesentium harum quibusdam nostrum aliquam
+					voluptates ullam aliquid, dolor consectetur expedita, nisi mollitia
+					reiciendis deleniti sit natus quos est.
+				</p>
+			</article>
+			<article>
+				<h2>6</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
+					perspiciatis quo praesentium harum quibusdam nostrum aliquam
+					voluptates ullam aliquid, dolor consectetur expedita, nisi mollitia
+					reiciendis deleniti sit natus quos est.
+				</p>
+			</article>
+        </div>
+        
+        <div class="second-row">
+			<article>
+				<h2>7</h2>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
+					perspiciatis quo praesentium harum quibusdam nostrum aliquam
+					voluptates ullam aliquid, dolor consectetur expedita, nisi mollitia
+					reiciendis deleniti sit natus quos est.
+				</p>
+			</article>
+		<article>
+			<h2>8</h2>
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
+				perspiciatis quo praesentium harum quibusdam nostrum aliquam voluptates
+				ullam aliquid, dolor consectetur expedita, nisi mollitia reiciendis
+				deleniti sit natus quos est.
+			</p>
+		</article>
+		<article>
+			<h2>9</h2>
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
+				perspiciatis quo praesentium harum quibusdam nostrum aliquam voluptates
+				ullam aliquid, dolor consectetur expedita, nisi mollitia reiciendis
+				deleniti sit natus quos est.
+			</p>
+		</article>
+		<article>
+			<h2>10</h2>
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
+				perspiciatis quo praesentium harum quibusdam nostrum aliquam voluptates
+				ullam aliquid, dolor consectetur expedita, nisi mollitia reiciendis
+				deleniti sit natus quos est.
+			</p>
+		</article>
+        </div>
+    </div>
+
+		<footer class="flex-varity">
+			<p>justify-content</p>
+			<div class="radio-container">
+        <input type="radio" id="option1" name="options" value="flex-start" checked>
+        <label for="option1">flex-start</label>
+
+        <input type="radio" id="option2" name="options" value="flex-end">
+        <label for="option2">flex-end</label>
+
+        <input type="radio" id="option3" name="options" value="center">
+        <label for="option3">center</label>
+
+        <input type="radio" id="option4" name="options" value="space-between">
+        <label for="option4">space-between</label>
+
+        <input type="radio" id="option5" name="options" value="space-around">
+        <label for="option5">space-around</label>
+
+				<input type="radio" id="option6" name="options" value="space-evenly">
+        <label for="option6">space-evenly</label>
+    </div>
+  	<div class="container" id="сontainer">
+        <div class="element">1</div>
+        <div class="element">2</div>
+        <div class="element">3</div>
+        <div class="element">4</div>
+    </div>
+		</footer>
+	<script>
+		const radioButtons = document.querySelectorAll('input[name="options"]');
+    const flexContainer = document.getElementById('сontainer');
+
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', () => {
+            flexContainer.style.justifyContent = radio.value;
+        });
+    });
+	</script>
+	</body>
+</html>
