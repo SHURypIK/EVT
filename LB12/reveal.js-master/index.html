@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css" />
+		<link rel="stylesheet" href="dist/reveal.css" />
+		<link rel="stylesheet" href="dist/theme/black.css" />
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" />
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-gradient="radial-gradient(#000080, #000000)" data-transition="fade-out">
+					<h1>POST, PUT OR PATCH</h1>
+					<br />
+					<h2>What will be Your?</h2>
+					<aside class="notes">
+						Как некоторые могут догадаться по названию, сегодня мы поговорим о
+						HTTP-запросах
+					</aside>
+				</section>
+
+				<section data-background-gradient="radial-gradient(#000000, #000080)" data-transition="fade-in convex-out">
+					<p>http://кто-ведет-тебя-за-руку.by</p>
+					<aside class="notes">
+						HTTP (HyperText Transfer Protocol) — это протокол передачи данных,
+						который используется для взаимодействия между вашим браузером и
+						сервером. Он работает по принципу запрос-ответ, где вы отправляете
+						запрос к серверу, а сервер возвращает ответ с нужными данными
+					</aside>
+				</section>
+
+				<section>
+					<section data-background-gradient="radial-gradient(#000080, #000000)" data-transition="convex-in concave-out">
+						<h1>POST</h1>
+						<pre>
+						<code data-noescape>
+						  POST /register
+							Content-Type: application/json
+							{
+  							"username": "john_doe",
+  							"email": "john.doe@example.com",
+  							"password": "securepassword123"
+							}
+						</code>
+						</pre>
+						<aside class="notes">
+							POST — это HTTP-метод, который используется для отправки данных на
+							сервер с целью обработки или создания нового ресурса. В отличие от
+							метода GET, который используется для получения данных, POST
+							отправляет данные, обычно через тело запроса. Этот метод часто
+							используется для отправки форм, загрузки файлов, создания записей
+							в базе данных и других операций, которые могут изменять состояние
+							сервера.
+						</aside>
+					</section>
+
+					<section data-background-gradient="radial-gradient(#000080, #000000)" data-transition="concave-in fade-out">
+						<h1>POST</h1>
+						<ul>
+							<li>Данные отправляются в теле запроса</li>
+							<li class="fragment">Не кэшируется</li>
+							<li class="fragment">
+								Подходит для передачи больших объёмов данных
+							</li>
+							<li class="fragment">
+								Для создания новых ресурсов на сервере или обработки данных
+							</li>
+						</ul>
+						<aside class="notes">
+							POST — это HTTP-метод, который используется для отправки данных на
+							сервер с целью обработки или создания нового ресурса. В отличие от
+							метода GET, который используется для получения данных, POST
+							отправляет данные, обычно через тело запроса. Этот метод часто
+							используется для отправки форм, загрузки файлов, создания записей
+							в базе данных и других операций, которые могут изменять состояние
+							сервера.
+						</aside>
+					</section>
+
+					<section data-transition="fade-in slide-out">
+						<p>Oh, No! U've founded me</p>
+						<p>
+							<a href="#/9">Go to the last slide</a>
+						</p>
+					</section>
+				</section>
+
+				<section data-background-gradient="radial-gradient(#000000, #000080)" data-transition="slide">
+					<h1>PUT</h1>
+					<ul>
+						<li>Одинаковые запросы PUT приводят к одинаковому результату</li>
+						<li class="fragment">Заменяет весь ресурс</li>
+						<li class="fragment">Для замены или создания ресурса</li>
+					</ul>
+					<aside class="notes">
+						PUT — это HTTP-метод, который используется для обновления или замены
+						существующего ресурса на сервере. Когда сервер получает запрос PUT,
+						он должен заменить текущий ресурс по указанному адресу новыми
+						данными, переданными в теле запроса.
+					</aside>
+				</section>
+
+				<section data-background-gradient="radial-gradient(#000080, #000000)" data-transition="slide-in zoom-out">
+					<h1>PATCH</h1>
+					<pre>
+						<code data-noescape>
+						  PATCH /users/123
+							Content-Type: application/json
+							{
+  							"email": "new.email@example.com"
+							}
+						</code>
+					</pre>
+					<ul>
+						<li class="fragment">Частичное обновление</li>
+						<li class="fragment">Не всегда идемпотентен</li>
+					</ul>
+					<aside class="notes">
+						PATCH — это HTTP-метод, который используется для частичного обновления ресурса на сервере. В отличие от PUT, который полностью заменяет ресурс, PATCH позволяет изменить только те части ресурса, которые нужно обновить, не затрагивая остальные данные.
+					</aside>
+				</section>
+
+				</section>
+				<section data-background-gradient="radial-gradient(#000080, #000000)" data-transition="zoom-in slide-out">
+					<h2 class="fragment fade-out">Так в чем разница?</h2>
+					<h3 class="fragment fade-in-then-out">Ха</h3>
+					<h2 class="fragment">Идеологическая</h2>
+				</section>
+				<section data-transition="slide">By</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				controlsBackArrows: 'hidden',
+				progress: false,
+				showNotes: true,
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			});
+		</script>
+	</body>
+</html>
+<!-- Reveal.initialize({
+
+  controls: true, -   стрелочки для слайдов
+  controlsTutorial: true, -   обучение стрелочкам
+  controlsLayout: 'bottom-right', -  расположение стрелочек
+  controlsBackArrows: 'faded', -  видимость стрелок
+  progress: true, - прогресс полоска 
+  slideNumber: false, - показывать номер слайда
+  showSlideNumber: 'all', - когда показывать номер слайда
+  hashOneBasedIndex: false, - начинать с 1 или с 0
+  hash: false, - изменение URL при переходе на новую страницу
+  respondToHashChanges: true, - обрабатывать изменения хеша
+  jumpToSlide: true, - к конкретному слайду через клавиши
+  history: false, - обновление истории браузера при переходе между слайдами
+  keyboard: true, - использование клавиатуры для навигации
+  keyboardCondition: null, - когда разрешены события клавы
+  disableLayout: false, - отключает базовую верстку от reveal для слайдов 
+  overview: true, - обзор слайдов
+  center: true, - центрирование слайдов
+  touch: true, - навигация при помощи сенсора
+  loop: false, - зацикливание презы
+  rtl: false, - реверс для арабского
+  navigationMode: 'default', - режим навигации по слайдам
+  shuffle: false, - перемешивает слайды
+  fragments: true, - поддержка фрагментов
+  fragmentInURL: true, - отображение текущего фрагмента в URL
+  embedded: false, - режим встраивания, когда презентация отображается в ограниченной области экрана.
+  help: true, - всплывающее окно помощи
+  pause: true, - возможность приостановить презентацию
+  showNotes: false, - заметки для спикера
+  autoPlayMedia: null, - авто-прогрузка медиа
+  preloadIframes: null, - предварительной загрузкой iframe
+  autoAnimate: true, - автоматическая анимация слайдов
+  autoAnimateMatcher: null, - пользовательскую логику для элементов, которые можно анимировать между слайдами
+  autoAnimateEasing: 'ease', - тип анимации
+  autoAnimateDuration: 1.0, - длительность анимации
+  autoAnimateUnmatched: true, - разрешение анимации для несоответствующих элементов 
+  autoAnimateStyles: [ -CSS-свойства, которые могут быть анимированны
+    'opacity',
+    'color',
+    'background-color',
+    'padding',
+    'font-size',
+    'line-height',
+    'letter-spacing',
+    'border-width',
+    'border-color',
+    'border-radius',
+    'outline',
+    'outline-offset',
+  ],
+  autoSlide: 0, автоматический переходом между слайдами
+  autoSlideStoppable: true, - останавливать авто-переходы после взаимодействия пользователя
+  autoSlideMethod: null, - Метод, используемый для навигации при авто-слайде
+  defaultTiming: null, - Устанавливает среднее время (в секундах), которое вы планируете тратить на слайды
+  mouseWheel: false, - Включить ли возможность навигации по слайдам с помощью колесика мыши
+  previewLinks: false, - Открывать ли ссылки в предварительном просмотре
+  transition: 'slide', - Устанавливает стиль анимации переходов между слайдами.
+  transitionSpeed: 'default', Устанавливает скорость перехода между слайдами.
+  backgroundTransition: 'fade', - Переход для фона слайдов.
+  viewDistance: 3, - Количество слайдов, которые будут видны в дополнение к текущему.
+  mobileViewDistance: 2, - количество слайдов, которые будут видны на мобильных устройствах.
+  display: 'block', - Способ отображения слайдов.
+  hideInactiveCursor: true, - Скрывать курсор, если он неактивен.
+  hideCursorTime: 5000, - Время в миллисекундах до скрытия курсора.
+}); -->

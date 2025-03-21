@@ -177,8 +177,91 @@ button:hover {
 	animation-fill-mode: forwards;
 }
 hr {
-	margin-top: 420px;
+	margin-top: 220px;
 	border: 0;
 	height: 5px;
 	background-color: #000000;
+}
+
+.nueton {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 300px;
+	height: 200px;
+	margin-left: 1000px;
+}
+
+.ball {
+	width: 50px;
+	height: 50px;
+	background-color: #103678;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+}
+
+ball::before,
+.ball::after {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 60px;
+	background-color: #f00;
+	top: -60px;
+	left: 25px;
+}
+
+#ball1 {
+	left: 0;
+	transform-origin: center -60px;
+	animation: swing-left 2s ease-in-out infinite;
+}
+
+#ball2 {
+	left: 50px;
+}
+
+#ball3 {
+	left: 100px;
+}
+
+#ball4 {
+	left: 150px;
+}
+
+#ball5 {
+	left: 200px;
+	transform-origin: center -60px;
+	animation: swing-right 2s infinite ease-in-out 2s;
+}
+
+@keyframes swing-right {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-45deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes swing-left {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(0);
+	}
+	75% {
+		transform: rotate(45deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
 }
