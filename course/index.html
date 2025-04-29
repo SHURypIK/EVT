@@ -1,0 +1,460 @@
+<!--Изменить все картинки зависящие только от темы на picture-->
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>Livio</title>
+	</head>
+	<body>
+		<div class="max-width-1440">
+			<header id="home">
+				<div class="nav-menu">
+					<a href="#home" class="logo-header">
+						<picture class="logo-picture">
+							<source
+								srcset="images/dark-mode/logo.svg"
+								media="(prefers-color-scheme: dark)"
+							/>
+							<img
+								src="images/light-mode/logo.svg"
+								alt="logo"
+								class="logo-img"
+							/>
+						</picture>
+						<span class="logo-text">Livivo</span>
+					</a>
+
+					<picture class="burger-picture">
+						<source
+							srcset="images/dark-mode/burger.svg"
+							media="(prefers-color-scheme: dark)"
+						/>
+						<img
+							src="images/light-mode/burger.svg"
+							alt="logo"
+							class="burger-img"
+							id="burger"
+						/>
+					</picture>
+
+					<nav id="nav">
+						<div class="sections-nav">
+							<a href="#about" data-text="О нас">О нас</a>
+							<a href="#reviews" data-text="Отзывы">Отзывы</a>
+							<a href="#contacts" data-text="Контакты">Контакты</a>
+						</div>
+						<a href="#form" class="target-action-nav">Подать заявку</a>
+					</nav>
+				</div>
+				<section class="header-section">
+					<picture class="logo-picture">
+						<source
+							srcset="images/common/header_photo-ss.jpg"
+							media="(max-width: 380px)"
+						/>
+						<source
+							srcset="images/common/header_photo-s.jpg"
+							media="(max-width: 768px)"
+						/>
+						<img
+							src="images/common/header_photo.jpg"
+							alt="header_photo"
+							class="header-section-img"
+						/>
+					</picture>
+
+					<div class="header-info">
+						<h1>Дом, который ждет вас — на расстоянии одного клика</h1>
+						<h4>
+							Никаких сложностей — только уют, надежность и качественное
+							обслуживание от нашей компании
+						</h4>
+					</div>
+					<button id="target-action">Подать заявку</button>
+				</section>
+			</header>
+			<main>
+				<section id="about" class="section-about">
+					<article class="article-about">
+						<h1 class="about-info-small-screen">О нас</h1>
+						<img src="images/common/about_photo.jpg" alt="about_photo" />
+						<aside class="aside-about-info">
+							<h1>О нас</h1>
+							<p>
+								Мы — команда, которая понимает, как важно найти не просто жильё,
+								а <span>настоящий дом</span>. Наш сервис создан для того, чтобы
+								упростить процесс поиска и подачи заявки на жильё — без сложных
+								процедур, лишних звонков и бумажной волокиты.
+							</p>
+							<p>
+								Мы сотрудничаем с проверенными агентствами и частными
+								арендодателями, чтобы предложить вам только
+								<span>актуальные, надёжные и комфортные варианты</span>.
+							</p>
+							<p>
+								Наша цель — сэкономить ваше время и сделать путь к новому дому
+								максимально простым и удобным.
+								<br />
+								<span>
+									Оставьте заявку онлайн — и мы сделаем всё остальное!
+								</span>
+							</p>
+							<a href="#form" class="target-action-nav">Подать заявку</a>
+						</aside>
+					</article>
+					<article class="article-why-us">
+						<h1>Почему именно мы?</h1>
+						<article class="article-why-us-advantages">
+							<div class="article-why-us-advantages-wrapper">
+								<div class="advantage-card">
+									<picture>
+										<source
+											srcset="images/dark-mode/about/check.svg"
+											media="(prefers-color-scheme: dark)"
+										/>
+										<img src="images/light-mode/about/check.svg" alt="image" />
+									</picture>
+									<h4>Удобство</h4>
+									<p>
+										Оформление заявки занимает всего пару минут — всё онлайн,
+										без очередей и лишней бюрократии
+									</p>
+								</div>
+								<div class="advantage-card">
+									<picture>
+										<source
+											srcset="images/dark-mode/about/lock.svg"
+											media="(prefers-color-scheme: dark)"
+										/>
+										<img src="images/light-mode/about/lock.svg" alt="image" />
+									</picture>
+									<h4>Надежность</h4>
+									<p>
+										Мы предлагаем только проверенное качественное жильё от
+										надёжных арендодателей
+									</p>
+								</div>
+							</div>
+							<div class="article-why-us-advantages-wrapper">
+								<div class="advantage-card">
+									<picture>
+										<source
+											srcset="images/dark-mode/about/speed.svg"
+											media="(prefers-color-scheme: dark)"
+										/>
+										<img src="images/light-mode/about/speed.svg" alt="image" />
+									</picture>
+									<h4>Скорость</h4>
+									<p>
+										Оперативная обработка заявок, сразу после оформления мы
+										свяжемся с вами в кратчайшие сроки
+									</p>
+								</div>
+								<div class="advantage-card">
+									<picture>
+										<source
+											srcset="images/dark-mode/about/support.svg"
+											media="(prefers-color-scheme: dark)"
+										/>
+										<img
+											src="images/light-mode/about/support.svg"
+											alt="image"
+										/>
+									</picture>
+									<h4>Поддержка</h4>
+									<p>
+										Мы всегда на связи и готовы помочь на каждом этапе начиная
+										от заявки до самого заселения
+									</p>
+								</div>
+							</div>
+						</article>
+					</article>
+				</section>
+				<div>
+					<picture class="logo-picture">
+						<source
+							srcset="images/common/divider-s-2.jpg"
+							media="(max-width: 768px)"
+						/>
+						<img
+							src="images/common/divider-1.jpg"
+							alt="divider"
+							class="divider"
+						/>
+					</picture>
+				</div>
+				<section id="reviews" class="section-reviews">
+					<h1>Отзывы</h1>
+					<article class="article-reviews">
+						<div class="wrapper-reviews">
+							<div class="review-card">
+								<img src="images/common/reviews/photo.svg" alt="photo" />
+								<p class="p-person">Анна, 29 лет</p>
+								<p>
+									Очень удобно, что заявку можно подать онлайн — не пришлось
+									никуда ехать. Мне быстро подобрали несколько отличных
+									вариантов, и уже через неделю я заселилась. Спасибо!
+								</p>
+							</div>
+							<div class="review-card">
+								<img src="images/common/reviews/photo (1).svg" alt="photo" />
+								<p class="p-person">Игорь, 35 лет</p>
+								<p>
+									Сервис реально сэкономил мне время. Оставил заявку вечером, на
+									следующий день уже был на просмотре квартиры. Всё чётко, без
+									лишней суеты оформили квартиру. Рекомендую!
+								</p>
+							</div>
+							<div class="review-card">
+								<img src="images/common/reviews/photo (2).svg" alt="photo" />
+								<p class="p-person">Марина, 42 года</p>
+								<p>
+									Спасибо команде за быструю и профессиональную помощь! Помогли
+									найти квартиру рядом с работой, учли все пожелания. Поддержка
+									всегда была на связи — очень комфортный сервис.
+								</p>
+							</div>
+							<div class="review-card">
+								<img src="images/common/reviews/photo (3).svg" alt="photo" />
+								<p class="p-person">Екатерина, 31 год</p>
+								<p>
+									Долго не могла найти подходящее жильё, пока не наткнулась на
+									этот сайт. Заполнила анкету — и уже через пару дней подписала
+									договор. Очень благодарна данной компании!
+								</p>
+							</div>
+							<div class="review-card">
+								<img src="images/common/reviews/photo (4).svg" alt="photo" />
+								<p class="p-person">Александр, 40 лет</p>
+								<p>
+									Отличный сервис! Всё быстро, удобно и без лишних звонков.
+									Особенно порадовало, что мне предложили только реальные
+									варианты — без "удалённых" квартир и подвохов.
+								</p>
+							</div>
+							<div class="review-card">
+								<img src="images/common/reviews/photo (5).svg" alt="photo" />
+								<p class="p-person">Ольга, 26 лет</p>
+								<p>
+									Очень понравилось, как работает поддержка — всё объяснили,
+									помогли с выбором. Квартиру нашли буквально за два дня.
+									Сервисом осталась полностью довольна!
+								</p>
+							</div>
+						</div>
+					</article>
+					<div class="reviews-controls">
+						<button id="left-control">
+							<img src="images/common/arrow-left.svg" alt="arrow-left" />
+						</button>
+						<button id="right-control">
+							<img src="images/common/arrow-right.svg" alt="arrow-right" />
+						</button>
+					</div>
+				</section>
+				<div>
+					<picture class="logo-picture">
+						<source
+							srcset="images/common/divider-s-1.jpg"
+							media="(max-width: 768px)"
+						/>
+						<img
+							src="images/common/divider-2.jpg"
+							alt="divider"
+							class="divider"
+						/>
+					</picture>
+				</div>
+				<section id="form" class="section-form">
+					<article class="article-form-info">
+						<h1>Оставьте заявку!</h1>
+						<h4>И наши сотрудники свяжутся с Вами в ближайшее время!</h4>
+					</article>
+					<article class="article-form">
+						<h2>Анкета</h2>
+						<form>
+							<div class="div-input-group">
+								<label for="name">ФИО</label>
+								<div class="div-input-field">
+									<img
+										src="images/common/form-empty/user.svg"
+										alt="user"
+										id="img-name"
+									/>
+									<input
+										type="text"
+										id="name"
+										placeholder="Имя Фамилия Отчество"
+										required
+									/>
+								</div>
+							</div>
+							<div class="div-input-group">
+								<label for="phone">Телефон</label>
+								<div class="div-input-field">
+									<img
+										src="images/common/form-empty/phone.svg"
+										alt="phone"
+										id="img-phone"
+									/>
+									<input
+										type="tel"
+										id="phone"
+										placeholder="+375 (XX) XXX - XX - XX"
+										required
+									/>
+								</div>
+							</div>
+							<div class="div-input-group">
+								<label for="email">Почта</label>
+								<div class="div-input-field">
+									<img
+										src="images/common/form-empty/mail.svg"
+										alt="mail"
+										id="img-mail"
+									/>
+									<input
+										type="email"
+										id="email"
+										placeholder="your.email@gmail.com"
+										required
+									/>
+								</div>
+							</div>
+						</form>
+						<button class="button-target-action" id="submit" disabled>
+							Отправить
+						</button>
+					</article>
+				</section>
+			</main>
+			<footer id="contacts" class="footer-contacts">
+				<a href="#home" class="logo-footer">
+					<picture>
+						<source
+							srcset="images/dark-mode/logo.svg"
+							media="(prefers-color-scheme: dark)"
+						/>
+						<img src="images/light-mode/logo.svg" alt="logo" class="logo-img" />
+					</picture>
+					<span class="logo-text">Livivo</span>
+				</a>
+				<aside class="aside-footer-info">
+					<div class="div-location">
+						<h3>Местоположение</h3>
+						<a
+							class="a-footer-location"
+							data-text="Минск, ул. Бобруйская 6"
+							href="https://www.google.com/maps?q=Минск,+ул. Бобруйская 6"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Минск, ул. Бобруйская 6<br />
+							ТЦ Галилео, этаж 2
+						</a>
+					</div>
+					<div class="div-contacts">
+						<h3>Контакты</h3>
+						<a
+							class="a-footer-mail"
+							data-text="livio.yourhome@gmail.com"
+							href="mailto:livio.yourhome@gmail.com"
+						>
+							livio.yourhome@gmail.com
+						</a>
+						<br />
+						<a
+							class="a-footer-phone"
+							data-text="+ 375 (29) 123-45-67"
+							href="tel:+375291234567"
+							>&#43; 375 (29) 123-45-67</a
+						>
+					</div>
+				</aside>
+			</footer>
+		</div>
+		<div class="aside-modal-wrapper" id="modal">
+			<aside class="aside-modal">
+				<picture>
+					<source
+						srcset="images/dark-mode/form/Group.svg"
+						media="(prefers-color-scheme: dark)"
+					/>
+					<img
+						src="images/light-mode/form/Group.svg"
+						alt="exit"
+						class="img-modal-exit"
+						id="close-modal"
+					/>
+				</picture>
+				<div class="article-form div-form-modal" id="modal-form">
+					<h2>Анкета</h2>
+					<form>
+						<div class="div-input-group">
+							<label for="modal-name">ФИО</label>
+							<div class="div-input-field">
+								<img
+									src="images/common/form-empty/user.svg"
+									alt="user"
+									id="img-modal-name"
+								/>
+								<input
+									type="text"
+									id="modal-name"
+									placeholder="Имя Фамилия Отчество"
+									required
+								/>
+							</div>
+						</div>
+						<div class="div-input-group">
+							<label for="modal-phone">Телефон</label>
+							<div class="div-input-field">
+								<img
+									src="images/common/form-empty/phone.svg"
+									alt="phone"
+									id="img-modal-phone"
+								/>
+								<input
+									type="tel"
+									id="modal-phone"
+									placeholder="+375 (XX) XXX - XX - XX"
+									required
+								/>
+							</div>
+						</div>
+						<div class="div-input-group">
+							<label for="modal-email">Почта</label>
+							<div class="div-input-field">
+								<img
+									src="images/common/form-empty/mail.svg"
+									alt="mail"
+									id="img-modal-mail"
+								/>
+								<input
+									type="email"
+									id="modal-email"
+									placeholder="your.email@gmail.com"
+									required
+								/>
+							</div>
+						</div>
+					</form>
+					<button class="button-target-action" id="modal-submit" disabled>
+						Отправить
+					</button>
+				</div>
+				<div class="div-modal-message" id="modal-message">
+					<h2>Заявка отправлена!</h2>
+					<p>
+						Спасибо, что обратились в нашу компанию Livio! Мы свяжемся с Вами в
+						ближайшее время.
+					</p>
+				</div>
+			</aside>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
