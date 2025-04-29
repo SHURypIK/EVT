@@ -229,7 +229,7 @@ nav a {
 	gap: 45px;
 	height: 100%;
 }
-.aside-about-info h1 {
+.aside-about-info h2 {
 	font-size: var(--size-h1);
 	font-weight: 600;
 }
@@ -261,7 +261,7 @@ nav a {
 	align-items: center;
 	gap: 60px;
 }
-.article-why-us h1 {
+.article-why-us h2 {
 	font-size: var(--size-h1);
 	font-weight: 600;
 }
@@ -390,7 +390,7 @@ nav a {
 	gap: 20px;
 	text-align: center;
 }
-.article-form-info h1 {
+.article-form-info h2 {
 	font-size: var(--size-h1);
 	font-weight: 600;
 }
@@ -766,7 +766,7 @@ label {
 		display: block;
 		font-size: var(--size-h2);
 	}
-	.aside-about-info h1 {
+	.aside-about-info h2 {
 		display: none;
 	}
 	.article-about img {
@@ -790,7 +790,7 @@ label {
 	.article-why-us {
 		gap: 40px;
 	}
-	.article-why-us h1 {
+	.article-why-us h2 {
 		font-size: var(--size-h2);
 		font-weight: 600;
 	}
@@ -808,7 +808,7 @@ label {
 	.section-form {
 		gap: 40px;
 	}
-	.article-form-info h1 {
+	.article-form-info h2 {
 		font-size: var(--size-h2);
 	}
 	.article-form-info h4 {
@@ -907,7 +907,7 @@ label {
 		display: block;
 		font-size: var(--size-h2);
 	}
-	.aside-about-info h1 {
+	.aside-about-info h2 {
 		display: none;
 	}
 	.article-about img {
@@ -931,7 +931,7 @@ label {
 	.article-why-us {
 		gap: 40px;
 	}
-	.article-why-us h1 {
+	.article-why-us h2 {
 		font-size: var(--size-h2);
 		font-weight: 600;
 	}
@@ -953,7 +953,7 @@ label {
 	.article-form {
 		padding: 20px;
 	}
-	.article-form-info h1 {
+	.article-form-info h2 {
 		font-size: var(--size-h3);
 	}
 	.article-form-info h4 {
@@ -1108,7 +1108,7 @@ label {
 		display: block;
 		font-size: var(--size-h3);
 	}
-	.aside-about-info h1 {
+	.aside-about-info h2 {
 		display: none;
 	}
 	.article-about img {
@@ -1132,7 +1132,7 @@ label {
 		gap: 30px;
 		padding: 60px 20px;
 	}
-	.article-why-us h1 {
+	.article-why-us h2 {
 		font-size: var(--size-h3);
 	}
 	.advantage-card h4 {
@@ -1185,7 +1185,7 @@ label {
 	.article-form {
 		padding: 20px;
 	}
-	.article-form-info h1 {
+	.article-form-info h2 {
 		font-size: var(--size-h3);
 	}
 	.article-form-info h4 {
