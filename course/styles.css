@@ -47,6 +47,15 @@
 }
 /*-----------------------------*/
 
+/*----------scroll-------------*/
+#form,
+#contacts,
+#reviews,
+#about {
+	scroll-margin-top: 124px;
+}
+/*-----------------------------*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -208,11 +217,25 @@ nav a {
 .header-section button {
 	left: 60px;
 	position: absolute;
-	padding: 10px 50px;
+	padding: 8px 48px;
 	background-color: var(--color-secondary);
+	border: 2px solid var(--color-secondary);
 	bottom: 10%;
 	font-weight: 500;
 	font-size: var(--size-h5);
+}
+
+.header-section button:not(:disabled):hover {
+	background-color: var(--color-bg);
+	border: 2px solid var(--color-bg);
+}
+
+.header-section button:not(:disabled):active {
+	background-color: var(--color-main);
+	color: var(--color-secondary);
+	font-weight: 600;
+	border: 2px solid var(--color-secondary);
+	padding: 8px 47px;
 }
 /*-----------------------------*/
 
@@ -604,6 +627,10 @@ label {
 	nav {
 		background-color: var(--color-main);
 	}
+	.header-section button {
+		color: var(--color-main);
+	}
+
 	.article-about {
 		background-color: var(--color-main);
 	}
@@ -638,15 +665,6 @@ label {
 		background-color: var(--color-secondary);
 		border: 2px solid var(--color-secondary);
 	}
-	.button-target-action:not(:disabled):hover {
-		background-color: var(--color-bg);
-		border: 2px solid var(--color-bg);
-	}
-	.button-target-action:not(:disabled):active {
-		background-color: var(--color-main);
-		color: var(--color-secondary);
-		border: 2px solid var(--color-secondary);
-	}
 
 	.footer-contacts {
 		background-color: var(--color-main);
@@ -668,6 +686,9 @@ label {
 	header .target-action-nav {
 		padding: 8px 2px;
 	}
+	header .target-action-nav:not(:disabled):active {
+		padding: 8px 0px;
+	}
 	.header-info h1 {
 		font-size: var(--size-h2);
 		font-weight: 700;
@@ -680,6 +701,7 @@ label {
 		font-size: var(--size-main-text);
 		font-weight: 500;
 	}
+
 	footer {
 		gap: 60px;
 		flex-direction: column;
@@ -1018,6 +1040,12 @@ label {
 }
 
 @media (max-width: 380px) {
+	#form,
+	#contacts,
+	#reviews,
+	#about {
+		scroll-margin-top: 104px;
+	}
 	.burger-img {
 		display: block;
 		padding: 11px 5.5px;
@@ -1084,10 +1112,15 @@ label {
 		font-weight: 500;
 		left: 5%;
 		bottom: 10%;
-		width: 340px;
+		width: 336px;
 		padding: 10px 0px;
 		text-align: center;
 	}
+
+	.header-section button:not(:disabled):active {
+		padding: 10px 0px;
+	}
+
 	.header-info img {
 		width: 100%;
 	}

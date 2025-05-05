@@ -309,6 +309,17 @@ function burger() {
 			nav.style.display = 'none';
 		}
 	});
-}
 
+	const navLinks = document.querySelectorAll('nav a');
+	navLinks.forEach(link => {
+		link.addEventListener('click', function (event) {
+			if (active) {
+				burgerImg.src = `images/${theme}/burger.svg`;
+				source.srcset = `images/${theme}/burger.svg`;
+				burgerImg.classList.replace('.burger-img-close', '.burger-img');
+				nav.style.display = 'none';
+			}
+		});
+	});
+}
 burger();
